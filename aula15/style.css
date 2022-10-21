@@ -1,0 +1,598 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&family=Titillium+Web:ital,wght@1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 8vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  color: white;
+}
+header > img {
+  width: 70px;
+  height: auto;
+}
+.nome {
+  font-family: "Great Vibes", cursive;
+  cursor: pointer;
+}
+span {
+  color: #ff7f00;
+}
+#span1 {
+  color: white;
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nome,
+.pesquise {
+  width: 25%;
+}
+.menuhead {
+  width: 50%;
+}
+.menuhead nav a {
+  color: #b4b4b4;
+  text-decoration: none;
+  padding-right: 50px;
+  font-size: 18px;
+  position: relative;
+}
+.menuhead nav a:hover {
+  color: white;
+}
+.menuhead nav a::after {
+  content: " ";
+  width: 0px;
+  height: 4px;
+  background-image: linear-gradient(45deg, #ff2500, #ff7100);
+  position: absolute;
+  top: 25px;
+  left: 0;
+  transition: width 0.5s;
+}
+.menuhead nav a:hover::after {
+  width: 30px;
+}
+.pesquise {
+  position: relative;
+  --size-button: 40px;
+}
+
+.input {
+  padding-left: var(--size-button);
+  height: var(--size-button);
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  outline: none;
+  width: var(--size-button);
+  transition: all ease 0.3s;
+  background-color: #191a1e;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%),
+    inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.input:focus,
+.input:not(:invalid) {
+  width: 200px;
+  cursor: text;
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%),
+    inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+}
+
+.input:focus + .icon,
+.input:not(:invalid) + .icon {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.pesquise .icon {
+  position: absolute;
+  width: var(--size-button);
+  height: var(--size-button);
+  top: 0;
+  left: 0;
+  padding: 8px;
+  pointer-events: none;
+}
+
+.pesquise .icon svg {
+  width: 100%;
+  height: 100%;
+}
+#bemvindo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+  font-family: "Silkscreen", cursive;
+}
+section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+section:nth-of-type(1) {
+  background-image: url(assets/back.jpg);
+  height: 1000px;
+}
+section:nth-of-type(2) {
+  background-image: url(assets/wall.png);
+  height: 1100px;
+}
+section:nth-of-type(3) {
+  background-image: url(assets/back2.jpg);
+  height: 1400px;
+}
+section:nth-of-type(4) {
+  background-image: url(assets/back3.jpg);
+  height: 1900px;
+}
+::-webkit-scrollbar{
+  width: 10px;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #ff7f00;
+}
+.area {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 2fr 3fr;
+  grid-template-areas:
+    "a1 main"
+    "a2 main";
+  gap: 0 400px;
+  padding: 60px;
+  padding-left: 100px;
+}
+.main {
+  grid-area: main;
+  position: relative;
+  border-bottom: 8px solid #ff7f00;
+  border-radius: 5px;
+  height: 81%;
+  width: 70%;
+}
+.main div {
+  width: 100%;
+  height: 140px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+}
+.main img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.main p:hover {
+  cursor: pointer;
+  color: #ff8000ab;
+}
+#a1 {
+  display: flex;
+  grid-area: a1;
+  position: relative;
+  border-bottom: 8px solid #ff7f00;
+  border-radius: 5px;
+}
+#a1 div {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+}
+#a1 img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#a1 p:hover {
+  cursor: pointer;
+  color: #ff8000ab;
+}
+#a2 {
+  grid-area: a2;
+  position: relative;
+  border-bottom: 8px solid #ff7f00;
+  border-radius: 5px;
+  padding-top: 10px;
+  height: 39.3vh;
+}
+#a2 div {
+  width: 100%;
+  height: 140px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+}
+#a2 img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#a2 p:hover {
+  cursor: pointer;
+  color: #ff8000ab;
+}
+
+.divisora {
+  width: 100%;
+  height: 50vh;
+  background-color: rgba(0, 0, 0);
+}
+
+.fil {
+  font-family: "Titillium Web", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: #ff7f00;
+  padding-top: 100px;
+  font-size: 40px;
+}
+.area3 {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 3fr 2fr;
+  grid-template-areas:
+    "main2 a3"
+    "main2 a4";
+  gap: 0 100px;
+  padding: 100px;
+}
+.main2 {
+  grid-area: main2;
+  position: relative;
+  border-bottom: 8px solid #ff7f00;
+  border-radius: 5px;
+  height: 81%;
+  width: 70%;
+}
+.main2 div {
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+}
+.main2 img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.main2 p:hover {
+  cursor: pointer;
+  color: #ff8000ab;
+}
+button {
+  position: relative;
+  padding: 1em 1.8em;
+  outline: none;
+  border: 1px solid #303030;
+  background: #212121;
+  color: #ff7f00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+button:hover {
+  box-shadow: 0 0 10px #ff7f00, 0 0 25px #ff4800, 0 0 50px #ff7f00;
+  transition-delay: 0.6s;
+}
+
+button span {
+  position: absolute;
+}
+
+button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff7f00);
+}
+
+button:hover span:nth-child(1) {
+  left: 100%;
+  transition: 0.7s;
+}
+
+button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff4800);
+}
+
+button:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.7s;
+  transition-delay: 0.35s;
+}
+
+button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ff7f00);
+}
+
+button:hover span:nth-child(2) {
+  top: 100%;
+  transition: 0.7s;
+  transition-delay: 0.17s;
+}
+
+button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #ff4800);
+}
+
+button:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.7s;
+  transition-delay: 0.52s;
+}
+
+button:active {
+  background: #ff7f00;
+  background: linear-gradient(to top right, #ff7f00, #ff4800);
+  color: #bfbfbf;
+  box-shadow: 0 0 8px #ff7f00, 0 0 8px #ff4800, 0 0 8px #ff7f00;
+  transition: 0.1s;
+}
+
+button:active
+  span:nth-child(1)
+  span:nth-child(2)
+  span:nth-child(2)
+  span:nth-child(2) {
+  transition: none;
+  transition-delay: none;
+}
+
+#a3 {
+  grid-area: a3;
+  position: relative;
+  border-bottom: 8px solid #ff7f00;
+  border-radius: 5px;
+  height: 90%;
+}
+#a3 div {
+  display: flex;
+  width: 100%;
+  height: 140px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+}
+#a3 img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#a3 p:hover {
+  cursor: pointer;
+  color: #ff8000ab;
+}
+#a4 {
+  grid-area: a4;
+  position: relative;
+  border-bottom: 8px solid #ff7f00;
+  border-radius: 5px;
+  height: 39.3vh;
+}
+#a4 div {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+}
+#a4 img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#a4 p:hover {
+  cursor: pointer;
+  color: #ff8000ab;
+}
+/*Animes*/
+.area4 {
+  width: 98vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 2fr 2fr;
+  grid-template-areas:
+    "a5 main3"
+    "a6 main3";
+  gap: 45px 350px;
+  padding: 60px;
+  padding-left: 200px;
+}
+.main3 {
+  grid-area: main3;
+  position: relative;
+  border-bottom: 8px solid #ff7f00;
+  border-radius: 5px;
+  height: 74.9%;
+  width: 100%;
+}
+.main3 div {
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+}
+.main3 img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.main3 p:hover {
+  cursor: pointer;
+  color: #ff8000ab;
+}
+#a5 {
+  display: flex;
+  grid-area: a5;
+  position: relative;
+  border-bottom: 8px solid #ff7f00;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+#a5 div {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 22px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+}
+#a5 img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#a5 p:hover {
+  cursor: pointer;
+  color: #ff8000ab;
+}
+#a6 {
+  grid-area: a6;
+  position: relative;
+  border-bottom: 8px solid #ff7f00;
+  border-radius: 5px;
+  padding-top: 10px;
+  height: 39.3vh;
+}
+#a6 div {
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+}
+#a6 img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#a6 p:hover {
+  cursor: pointer;
+  color: #ff8000ab;
+}
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+footer a img {
+  margin-left: 120px;
+  width: 50px;
+  height: 50px;
+}
